@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css">
+    <title>SuperHero</title>
+</head>
+<body>
+
+    <!-- header  -->
+
+    <div class="header" id="home">
+        <div class="container">
+            <div class="logo">
+                SUPER<span>HEROES</span> 
+            </div>
+
+            
+        </div>
+    </div>
+
+    <!-- hero -->
+
+    <div class="hero">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="search-name" placeholder="Search your favourite hero here...">
+                <div class="btn-search"><i class="bi bi-search"></i></div>
+            </div>
+            <div class="search-list">
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- back to top button start-->
+    <a href="#home">
+        <div class="top-btn">
+            <i class="bi bi-chevron-up"></i>
+        </div>
+    </a>
+    
+
+    <!-- preview section -->
+
+    <div class="preview-container" id="preview-container">
+
+        <i class="bi bi-x-lg" id="prev-close"></i>
+
+
+        <div class="results-container">
+            <img src="./Images/default.jpg" onerror="this.src='./Images/default.jpg'" alt="" id="hero-img">
+
+            <div class="content">
+
+                <div class="hero-name" id="hero-name">Batman</div>
+
+                <div class="content-results">
+                    <div class="btn-container">
+                        <button class="btn active" >Powerstats</button>
+                        <button class="btn" >Biography</button>
+                        <button class="btn" >appearance</button>
+                        <button class="btn" >work</button>
+                        <button class="btn" >connections</button>
+                    </div>
+    
+                    <div class="content-container">
+                        <div class="content active" id="powerstats">
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>INTELLIGENCE</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>STRENGTH</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>SPEED</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>DURABILITY</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>POWER</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-shield-shaded"></i>
+                                    <h4>COMBAT</h4>
+                                </div>
+                                <div class="rigth">100</div>
+                            </div>
+    
+                        </div>
+                        <div class="content" id="biography">
+                            <p><span>Full Name</span> Terry Mcginnis</p>
+                            <p><span>Alert-Egos</span> Terry Mcginnis</p>
+                            <p><span>Aliases</span> Terry Mcginnis</p>
+                            <p><span>Place-Of-Birth</span> Terry Mcginnis</p>
+                            <p><span>First-Apperance</span> Terry Mcginnis</p>
+                            <p><span>Publisher</span> Terry Mcginnis</p>
+                 
+                        </div>
+                        <div class="content" id="appearance">
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>GENDER</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>RACE</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>HEIGHT</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>WEIGHT</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>EYE-COLOR</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                            <div class="stat-container">
+                                <div class="left">
+                                    <i class="bi bi-star-fill"></i>
+                                    <h4>HAIR-COLOR</h4>
+                                </div>
+                                <div class="rigth">Male</div>
+                            </div>
+                        </div>
+                        <div class="content" id="work">
+                            <p><span>Base:</span> Mobile; formerly Manhattan, Hellcarrier</p>
+                            <p><span>Occupation:</span> Mercenary, janitor; former pirate, terrorist</p>
+                        </div>
+                        <div class="content" id="connections">
+                            <div class="container">
+                                <h3>GROUP--AFFILIATION</h3>
+                                <p>Batman Family, Justice League Unlimited</p>
+                            </div>
+                            <div class="container">
+                                <h3>RELATIVES</h3>
+                                <p>Batman Family, Justice League Unlimited</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- marvel hero section -->
+
+    <div class="hero-list marvels" >
+
+        <div class="list-heading">
+            <h1>Famous Marvel Heroes</h1>
+        </div>
+
+        <!-- hero list -->
+
+
+        <div class="marvels-list-items" id="marvels-hero-list">
+
+        </div>
+
+        
+        
+    </div>
+    <!-- DC hero section -->
+
+    <div class="hero-list dc-hero" >
+
+        <div class="list-heading">
+            <h1>Famous DC Heroes</h1>
+        </div>
+
+        <!-- hero list -->
+
+
+        <div class="dc-list-items" id="dc-hero-list">
+
+        </div>
+
+        
+        
+    </div>
+    <!-- avengers hero section -->
+
+    <div class="hero-list avengers" >
+
+        <div class="list-heading">
+            <h1>Famous Avengers</h1>
+        </div>
+
+        <!-- hero list -->
+
+
+        <div class="avengers-list-items" id="avengers-hero-list">
+
+        </div>
+
+        
+        
+    </div>
+
+    <!-- all hero list section -->
+
+    <div class="hero-list" >
+
+        <div class="list-heading">
+            <h1>All SuperHeroes</h1>
+        </div>
+
+        <!-- hero list -->
+
+
+        <div class="list-items" id="hero-list">
+
+        </div>
+
+        <!-- sort buttons -->
+
+        <div class="btn-container" id="btn-container">
+            <button class="btn" id="prev-btn">Prev</button>
+            <button class="btn" id="first-btn">First</button>
+            <button class="btn" id="last-btn">Last</button>
+            <button class="btn" id="next-btn">Next</button>
+            
+        </div>
+        
+        
+    </div>
+
+    
+
+    <!-- script -->
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>

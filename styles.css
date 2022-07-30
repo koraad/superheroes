@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    overflow-x: hidden;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #161616;
+    --secondary-text-color: #515151;
+}
+
+
+body {
+    width: 100%;
+    background-color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+/* back to top button */
+
+
+.top-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 900;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    cursor: pointer;
+
+}
+
+.top-btn i {
+    font-size: 20px;
+    
+    text-align: center;
+    color: black;
+
+}
+
+/* header start */
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow-x: visible;
+}
+.header .container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    overflow-x: visible;
+}
+.header .container .logo{
+    font-size: 30px;
+    font-weight: 700px;
+    letter-spacing: 2px;
+}
+.header .container .logo span{
+    color: red;
+}
+
+
+/* hero start */
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./Images/hero\ all.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: visible;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: visible;
+    width: auto;
+    width: 500px;
+
+}
+
+.search-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+    border-radius: 30px;
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.search-box input{
+    padding: 10px 15px;
+    width: 90%;
+    color: white;
+    background-color: transparent;
+    font-size: 15px;
+    
+}
+.search-box input::placeholder{
+    letter-spacing: 2px;
+    font-size: 12px;
+    
+}
+.search-container .search-box .btn-search{
+    background-color: transparent;
+    color: red;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+}
+
+
+
+.search-container .search-list{
+    display: none;
+    width: 100%;
+    max-height: 300px;
+    min-height: 30px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin-top: 10px;
+    overflow-y: auto;
+    z-index: 1000;
+    background-color: black;
+    padding-top: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+  }
+  
+
+.search-container .search-list .list-item{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.search-container .search-list .list-item .title{
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+}
+.search-container .search-list .list-item img{
+    width: 70px;
+    height: 100%;
+    object-fit: cover;
+    
+}
+.search-container button{
+    padding: 5px 10px;
+    cursor: pointer;
+
+}
+
+
+/* preview start */
+
+.preview-container {
+    position: fixed;
+    opacity: 0;
+    top: -100%;
+    left: 0;
+    background-color: black;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+    transition: 0.6s ease-in-out;
+}
+.preview-container .bi-x-lg{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+.preview-container .bi-x-lg:hover{
+    transform: rotate(45deg);
+    transition: 0.3s ease-in;
+}
+
+.preview-container .results-container {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+}
+.results-container img{
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-container .results-container .content {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;  
+    align-items: flex-start;
+
+}
+
+.content .hero-name {
+    background-color: red;
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    border: none;
+    height: 45px;
+    min-width: 100px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+
+.content .content-results {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.btn-container button.active {
+    border-bottom: 4px red solid;
+}
+.content .content-results .btn-container{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.5);
+}
+.content-results .btn-container  button{
+    padding: 0 5px;
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+.content-results .content-container{
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+}
+
+.content-results .content-container .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+}
+.content-results .content-container .content.active{
+    
+    right: 0;
+}
+
+/* Powerstats */
+
+#powerstats, #appearance{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+}
+#powerstats .stat-container,
+#appearance .stat-container
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(68, 68, 68, 0.5);
+}
+#powerstats .stat-container .left,
+#appearance .stat-container .left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#powerstats .stat-container .rigth,
+#appearance .stat-container .rigth
+{
+    font-weight: 900;
+    font-size: 18px;
+}
+#powerstats .stat-container .left i,
+#appearance .stat-container .left i
+{
+    color: red;
+    font-size: 20px;
+}
+#powerstats .stat-container .left h4,
+#appearance .stat-container .left h4
+{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: var(--secondary-text-color);
+}
+
+/* Biography and work*/
+ 
+#biography p,
+#work p
+{   margin: 10px 0;
+    font-size: 15px;
+    text-transform: none;
+
+} 
+#biography p span,
+#work p span
+{   font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    
+} 
+
+/* appearance */
+
+#appearance .stat-container .rigth
+{
+    font-weight: 500;
+    font-size: 15px;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+
+/* connection */
+
+#connections {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+}
+#connections .container h3{
+    color: var(--secondary-text-color);
+    position: relative;
+}
+#connections .container p{
+    font-size: 15px;
+    text-transform: none;
+    margin-top: 5px;
+}
+
+
+/* all heros list */
+
+
+.hero-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-list .list-heading {
+    display: flex;
+    color: white;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: rgba(150, 150, 150, 0.5) solid 1px ;
+}
+.list-heading h1{
+    text-align: left;
+}
+
+
+.list-items, 
+.marvels-list-items, 
+.dc-list-items,
+.avengers-list-items 
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 800px;
+    gap: 15px;
+}
+
+.marvels-list-items, 
+.dc-list-items,
+.avengers-list-items 
+{
+    
+    min-height: 0;
+
+}
+.list-items .hero-card,
+.marvels-list-items .hero-card,
+.dc-list-items .hero-card,
+.avengers-list-items .hero-card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 15%;
+    min-width: 200px;
+    height: 380px;
+    padding: 12px;
+    background-color: black;
+    color: white;
+}
+
+.list-items .hero-card .card-content,
+.marvels-list-items .hero-card .card-content,
+.dc-list-items .hero-card .card-content,
+.avengers-list-items .hero-card .card-content
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 3px;
+    gap: 3px;
+}
+
+.power{
+    text-align: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.power span{
+    background-color: red;
+    width: 24px;
+    height: 16px;
+    line-height: 12px;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 10px;
+    padding: 2px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+.list-items .hero-card img,
+.marvels-list-items .hero-card img,
+.dc-list-items .hero-card img,
+.avengers-list-items .hero-card img
+{
+    
+    width: 100%;
+    height: 62%;
+    object-fit: cover;
+}
+
+.btn {
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.view-btn.btn {
+    width: 100%;
+    flex: none;
+    transition: all 0.5s ease-in;
+}
+.view-btn.btn:hover {
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.hero-list .btn-container{
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .search-container {
+        
+        width: 90%;
+    
+    }
+
+    
+}
